@@ -7,7 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="css/zhihu.css">
 </head>
 <body>
@@ -21,12 +21,12 @@
             <div class="desk-front sign-flow clearfix sign-flow-simple">
                 <div class="index-tab-navs">
                     <div class="navs-slider">
-                        <a href="#signup" id="label1" class="active">注册</a>
-                        <a href="#signin" id="label2"  >登录</a>
+                        <a href="javascript:;" id="label1" class="active tab_label">注册</a>
+                        <a href="javascript:;" id="label2" class="tab_label">登录</a>
                         <span class="navs-slider-bar"></span>
                     </div>
                 </div>
-                <div class="view view-signin selected" data-za-module="SignInForm" style="display: block;">
+                <div class="view view-signin selected tab_one" data-za-module="SignInForm" style="display: block;">
                     <form action="#">
                         <div class="group-inputs">
                             <div class="name input-wrapper">
@@ -49,12 +49,16 @@
                     </p>
                     <a href="#" class="signuo-entry">注册机构号</a>
                     <div class="xiazaiapp">
-                        <span class="xiazaiapptext">下载知乎APP</span>
+                        <span class="xiazaiapptext download-zhihuapp" style="display: block;">下载知乎APP</span>
+                        <span class="xiazaiapptext close-code" style="display: none;">关闭二维码</span>
+                        <div class="QRCode-card" style="display: none;">
+                            <div class="QRCode-image"><img src="img/qr-code.d6565408.png" height="250" width="250"/></div>
+                        </div>
                     </div>
                 </div>
-                <div class="view view-signup" data-za-module="SignUpForm "  style="display: none">
-                    <div class="qrcode-container"style="display: block">
-                        <div class="qrcode-s1">
+                <div class="view view-signup tab_two" data-za-module="SignUpForm "  style="display: none">
+                    <div class="qrcode-s1" >
+                        <div class="qrcode-container" style="display: block">
                             <div class="qrcode-img-wrapper">
                                 <img src="img/image.png" height="150" width="150"/>
                             </div>
@@ -67,8 +71,54 @@
                                 <span class="switch-password"><a href="#">使用密码登录</a></span>
                             </div>
                         </div>
+                        <form class="vvv" style="display: none">
+                            <div class="vvv_a" style="display: block;">
+                                <div class="email input-wrapper border-a">
+                                    <input required type="text" class="account" name="account" aria-label="手机号或邮箱" placeholder="手机号或邮箱">
+                                </div>
+                                <div class="email input-wrapper border-a">
+                                    <input required type="password" class="account" name="password" aria-label="密码" placeholder="密码">
+                                </div>
+                                <div class="button-wrapper command">
+                                    <button class="sign-button submit" type="submit">登录</button>
+                                </div>
+                                <div class="sign-switch">
+                                    <a href="#" class="sign-switch-a1 shoujiyanzhengma">手机验证码登录</a>
+                                    <a href="#" class="sign-switch-a2" style="float: right">无法登录?</a>
+                                </div>
+                                <div class="sign-switch-b">
+                                    <a href="#" class="sign-switch-a2 erweima">二维码登录</a>
+                                    <span>·</span>
+                                    <a href="#" class="sign-switch-a2">社交账号登陆</a>
+                                </div>
+                            </div>
+                            <div class="vvv_b" style="display: none;">
+                                <div class="email input-wrapper border-a">
+                                    <input required type="text" class="account" name="account" aria-label="手机号" placeholder="手机号">
+                                </div>
+                                <div class=" input-wrapper border-a">
+                                    <input required type="text" class="width_a" aria-label="短信验证码" placeholder="短信验证码">
+                                    <button type="button" class="send-code-button" style="display: inline-block;">获取验证码</button>
+                                </div>
+                                <div class="button-wrapper command">
+                                    <button class="sign-button submit" type="submit">登录</button>
+                                </div>
+                                <div class="sign-switch">
+                                    <a href="#" class="sign-switch-a1 passworddenglu">密码登录(手机号或邮箱)</a>
+                                </div>
+                                <div class="sign-switch-b">
+                                    <a href="#" class="sign-switch-a2">二维码登录</a>
+                                    <span>·</span>
+                                    <a href="#" class="sign-switch-a2">社交账号登陆</a>
+                                </div>
+                            </div>
+                        </form>
                         <div class="xiazaiapp">
-                            <span class="xiazaiapptext">下载知乎APP</span>
+                            <span class="xiazaiapptext download-zhihuapp" style="display: block;">下载知乎APP</span>
+                            <span class="xiazaiapptext close-code" style="display: none;">关闭二维码</span>
+                            <div class="QRCode-card" style="display: none;">
+                                <div class="QRCode-image"><img src="img/qr-code.d6565408.png" height="250" width="250"/></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -80,7 +130,7 @@
 
 </script>
 <script src="js/jquery.1.10.1.js"></script>
-<script src="js/bootstrap.js"></script>
+<!-- <script src="js/bootstrap.js"></script> -->
 <script src="js/zhihu.js"></script>
 </body>
 </html>

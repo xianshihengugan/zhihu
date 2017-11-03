@@ -28,8 +28,26 @@ div{display: block;}
     padding: 30px 0 102px;
     width: 300px;
 }
+    .index-tab-navs a{
+        color: #999999;
+    }
+    .index-tab-navs a:hover{
+        color: black;
+    }
+.index-tab-navs a.active{
+    opacity: 1;
+    color: #0f88eb;
+}
 .sign-flow{
     text-align: center;
+}
+.sign-flow .view .agreement-tip a{
+    color: #698ebf;
+    text-decoration: none;
+}
+.sign-flow .view .signuo-entry{
+    color: #0f88eb;
+    text-decoration: none;
 }
 .nava{
    width: 150px;height:40px;text-align: center;
@@ -41,6 +59,7 @@ div{display: block;}
     margin-bottom: 10px;
     font-size: 18px;
     text-align: center;
+    color: #555;
 }
 .index-tab-navs .navs-slider{
         position: relative;
@@ -54,7 +73,11 @@ div{display: block;}
         width: 2.4em;
         height: 2px;
         background: #0f88eb;
+        -webkit-transition: left .15s ease-in;
         transition: left .15s ease-in;
+}
+.index-tab-navs .navs-slider[data-active-index="1"] .navs-slider-bar {
+    left: 4em;
 }
 .index-tab-navs a{
     float: left;
@@ -104,6 +127,9 @@ div{display: block;}
     color: #fff;
     margin-top: 20px;
 }
+.sign-button:hover{
+    background-color: #5ca5e8;
+}
 .view .agreement-tip {
     margin-top: 21px;
     font-size: 13px;
@@ -139,6 +165,8 @@ div{display: block;}
     outline: 0;
     text-align: center;
     margin-top:20px;
+    position: relative;
+    z-index: 11;
 }
 .qrcode-container{
     width: 298px;
@@ -149,16 +177,25 @@ div{display: block;}
     text-align: center;
     position: relative;
     z-index: 10;
-
+}
+.qrcode-s1 p {
+        color: #595959;
+        font-size: 13px;
+        line-height: 18px;
+  }
+.qrcode-s1 p a{
+    color: #5ca5e8;
+    text-decoration: none;
+}
+.qrcode-s1 .qrcode-cut-button span a{
+    color: #5ca5e8;
+    text-decoration: none;
 }
 .qrcode-s1{
-    margin-top: 25px;
-    margin-left: 15px;
-    margin-right: 15px;
     height:273px;
 }
 .qrcode-img-wrapper{
-    margin: 0 auto 14px;
+    margin: 20px auto 14px;
     width: 150px;
     height: 150px;
     text-align: center;
@@ -177,3 +214,72 @@ div{display: block;}
     border-top: 1px solid #d5d5d5;
     line-height: 46px;
 }
+.vvv .border-a{
+    border-bottom: 1px solid #d5d5d5;
+}
+.vvv .sign-switch{
+    margin-top: 20px;
+}
+.vvv .sign-switch-a1{
+    padding: 0;
+    font-size: 14px;
+    color: #5ca5e8;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    text-decoration: none;
+}
+.vvv .sign-switch-a2{
+    padding: 0;
+    font-size: 14px;
+    color: #999999;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    text-decoration: none;
+}
+.sign-switch-b{
+    margin-top: 20px;
+}
+.vvv .sign-switch-a2:hover{
+    color: #555555;
+}
+.vvv_b .input-wrapper .width_a{
+    width: 200px;
+}
+.vvv_b .input-wrapper .send-code-button{
+    width: 93px;
+    padding: 1em 8px;
+    line-height: 19px;
+    color: #5ca5eb;
+    background: #fff;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+}
+.QRCode-card {
+    position: absolute;
+    left: -5px;
+    bottom: 65px;
+    width: 310px;
+    height: 310px;
+    color: #555;
+    background-color: #fff;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .15);
+    border-radius: 10px;
+}
+.QRCode-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    }
