@@ -1,0 +1,25 @@
+知乎登录注册页面
+1、首先构建页面，通过原网页知道具体属性长宽等等，大概也就是把静态的复制过来。
+2、首先要用jq实现注册和登录两个页面的切换，切换的前提是两个页面都得在页面中同一个位置，
+因为默认选择是注册，所以注册页面应该显示出来，在点击登陆时显示登录页面，首先需要用到的
+知识点就是display，当display属性为block时是块级元素显示出来，为none时为不生成也就是不显示出来，两个页面构建出来
+后默认显示注册页面所以它的dispaly属性就是block，登录就是none，jq中的show和hide相当于 显示跟隐藏，与diaplay本质不
+一样，看起来效果是一样的。
+实现注册和登录的切换，用到点击事件也就是click事件：$(function(){
+	$('body').on('click','.tab_label',function(){
+})
+})函数的基本结构。
+.index-tab-navs .navs-slider[data-active-index="1"] .navs-slider-bar {
+    left: 4em;
+}这个css样式就是 当class是.navs-slider且data-active-index属性等于1时，.navs-slider-bar缩进4个单位也就是向右移动四个单位
+.navs-slider-bar样式是注册下那个横杠。
+首先初始化当前被点击dom节点对象：var a = $（this），
+因为注册登录切换，所以只有在点击节点在未选中的状态下，才能够执行切换，所以就是if(!a.is('.active'))，
+$('.tab_label').removeClass('active')去掉切换前被选中的dom节点，a.addClass('active')当前选中的dom节点添加上active，
+接下来就是当点击切换或登录时执行的函数，通过if{}else{}语句，当点击注册时，移除.navs-slider中data-active-index属性，也就是
+.navs-slider-bar回到初始状态，隐藏登录页，显示注册页。else也就是点击登陆时，.navs-slider中data-active-index属性等于1时.navs-slider-bar缩进四个单位，
+也就是在登录页面下了。
+注册和登录页面都有下载知乎APP，点击它弹出二维码，也是通过运用display和show hide实现，多了一个定位和z-index，z-index是页面层次，因为页面是浮在注册登录
+上面所以设置z-index，使页面覆盖下面页面创建div构建基本页面样式，
+将二维码放入div中，设置好的div通过position：absoule定位到位置，然后添加jq click事件，跟注册登录一个原理了就。
+迷迷糊糊。
